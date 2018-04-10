@@ -1,6 +1,6 @@
 import argparse
 from os.path import basename
-import numpy as np
+# import numpy as np
 import random
 from utilities import utilities as util
 from tools import cameraCalibration as calib
@@ -9,8 +9,6 @@ from tools import poseEstimation as posEst
 if __name__ == '__main__':
     # para cada uno de los modos incluir grupos de argumentos de forma excluyente
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", "--data", required=True,
-                        help="-d 3D coordinates of the points (real world)")
     parser.add_argument("-p", "--path", required=True,
                     help="-p Path where the template and images are stored")
     parser.add_argument("-m", "--mode", required=False, default= 0,
@@ -20,9 +18,9 @@ if __name__ == '__main__':
     # Configuration
     file_ext = '.jpg'
     template_idx = 0
-    axis = 1
+    axis = 0
     plot = 1
-    pose = 0
+    pose = 1
     # tmp_substr = '*Plantilla*'
     # usr_substr = '*Individuo*'
 
